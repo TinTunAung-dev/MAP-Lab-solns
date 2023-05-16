@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .centerContent {
+            text-align: center;
+            vertical-align: top;
+        }
+    </style>
+        
+</head>
+
+<body>
+    
+    <div class="centerContent">
+        <div class="centerContent">
+            <img id = "img1" src="./black-moon.png" alt="moon" 
+            style="object-fit:fill;
+            width:160px;
+            height:160px;
+            border: solid 0px #CCC" />
+        <img id = "img2" src="./moon.png" alt="black-moon" 
+            style="object-fit:fill;
+            width:160px;
+            height:160px;
+            border: solid 0px #CCC" />   
+        </div>
+        <button id="btnSwap">Swap</button>
+      </div>
+
+    <script>
+        const img1 = document.getElementById("img1");
+        const img2 = document.getElementById("img2");
+        const btnSwap = document.getElementById("btnSwap")
+        
+        btnSwap.onclick = function(){
+            console.log("click swap");
+            if(img1.src.match('black-moon.png') && img2.src.match("moon.png")){
+                img1.src = 'moon.png';
+                img2.src = 'black-moon.png';
+            }else{
+                img1.src = 'black-moon.png';
+                img2.src = 'moon.png'
+            }
+        }
+    </script>
+</body>
+</html>
